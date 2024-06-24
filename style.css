@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* paleta de colores: #1A374E #D5F0E9 #FFFFFF #77A3C7 */
+
+body{
+    font-family: "Quicksand","Maven+Pro";
+    background-color: #D5F0E9;
+    width: 100%;
+}
+li{
+    list-style-type: none;
+}
+header{
+    color: #ffffff;
+    background-color: #1A374E;
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+}
+.navbar {
+    width: 100%;
+} 
+.barra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.navbar-style .navbar-brand{ 
+    color: #ffffff;
+    font-weight: 600;
+    width: 100%;
+    font-size: medium;
+    text-align: center;
+    white-space: normal;
+    word-wrap: normal;
+}
+.navbar-style .navbar-nav .nav-link{
+    color: #ffffff;
+    text-align: end;
+}
+.navbar-style .navbar-nav .nav-link:hover{
+    font-size: 20px;
+    font-weight: 50%;
+}
+.logo{
+    width: 33px;
+}
+.portada{
+    position: static;
+    width: 100%;
+    margin-top: 128px;
+}
+h1{
+    color: #77A3C7;
+    font-weight: 700;
+    text-align: center;
+}
+.intro{
+    background-color: #ffffff;
+    color: #1A374E;
+    text-align: center;
+    padding: 5%;
+    margin: 5%;
+    border: 2px solid #77A3C7;
+    font-size: small;
+    font-weight: 500;
+}
+.figure-intro{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    padding: 0px;
+    width: 75%;
+    border: 2px solid #77A3C7;
+}
+/* .figure-intro:hover{
+    width: 10%;
+} */
+.componentes{
+    background-color: #1A374E;
+    color: #ffffff;
+    padding: 5%;
+    font-size: small;
+    text-align: center;
+}
+.componentes ul {
+    padding: 0%;
+    margin: 0%;
+}
+.componentesFigure{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 5%;
+}
+table{
+    border: 1px solid #1A374E;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: smaller;
+    font-weight: bolder;
+}
+tr td{
+    border: 1px solid #1A374E;
+}
+h3{
+    font-size: 140%;
+    text-align: center;
+}
+.escorrentia{
+    background-color: #1A374E;
+    color: #ffffff;
+    text-align: center;
+    height: 30%;
+    padding: 5%;
+    font-size: small;
+}
+.uno{
+    width: 100%;
+    border: 2px solid #77A3C7;
+}
+.e-uno{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 5%;
+}
+.eutro{
+    background-color: #ffffff;
+    color: #1A374E;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5%;
+    font-size: small;
+    font-weight: 500;
+    border: 2px solid #77A3C7;
+}
+.dos{
+    width: 100%;
+    border: 2px solid #77A3C7;
+}
+.e-dos{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 5%;
+} 
+footer img{
+    height: 40%;
+    vertical-align: -webkit-baseline-middle;
+}
+footer{
+    background-color: #1A374E;
+    height: 50px;
+    text-align: center;
+}
+@media (min-width: 768px){
+    #grilla{
+        display: grid;
+        grid-template-areas: 
+            "header header header header"
+            "figure figure figure figure"
+            "main main main main"
+            "infouno infouno infodos infodos"
+            "infocuatro infocuatro infocuatro infocuatro"
+            "infotres infotres infotres infotres"
+            "footer footer footer footer";
+        grid-template-columns: auto;
+        grid-template-rows: auto; 
+        }
+    header{ grid-area: header;}
+    figure{ grid-area: figure;}
+    main{ grid-area: main;}
+    section#infouno{ grid-area: infouno;}
+    section#infodos{ grid-area: infodos;}
+    section#infotres{ grid-area: infotres;}
+    section#infocuatro { grid-area: infocuatro;}
+    footer{ grid-area: footer;}
+    
+}
+@media (min-width: 1024px){
+    /* #grilla{
+        display: grid;
+        grid-template-areas: 
+            "header header header header"
+            "figure figure figure figure"
+            "main main main main"
+            "infouno infouno infodos infodos"
+            "infocuatro infocuatro infocuatro infocuatro"
+            "infotres infotres infotres infotres"
+            "footer footer footer footer";
+        grid-template-columns: auto;
+        grid-template-rows: auto; 
+        }
+    header{ grid-area: header;}
+    figure{ grid-area: figure;}
+    main{ grid-area: main;}
+    section#infouno{ grid-area: infouno;}
+    section#infodos{ grid-area: infodos;}
+    section#infotres{ grid-area: infotres;}
+    section#infocuatro { grid-area: infocuatro;}
+    footer{ grid-area: footer;} */
+}
