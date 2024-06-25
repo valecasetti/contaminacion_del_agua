@@ -254,11 +254,8 @@ footer{
     }
 }
 
-
-
-
 @media (min-width: 1024px){
-    /* #grilla{
+    #grilla{
         display: grid;
         grid-template-areas: 
             "header header header header"
@@ -278,5 +275,41 @@ footer{
     section#infodos{ grid-area: infodos;}
     section#infotres{ grid-area: infotres;}
     section#infocuatro { grid-area: infocuatro;}
-    footer{ grid-area: footer;} */
+    footer{ grid-area: footer;}
+    .logo{
+        width: 60px;
+    }
+    li{
+        font-size: small;
+    }
+    h1{
+        font-size: 55px;
+    }
+    img{
+        width: 75%;
+    }
+    .figure-intro{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        border: none;
+    }
+    footer img{
+        height: auto;
+        padding: 0 5% 0 5%;
+    }
+    .e-uno{
+        display: flex;
+        flex-direction: row;
+    }
+    .e-dos{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .componentes ul li{
+        font-size: 16px;
+    }
+    .componentes{
+        padding: 5%;
+    }
 }
