@@ -160,6 +160,7 @@ footer img{
 }
 footer{
     background-color: #1A374E;
+    color: #77A3C7;
     height: 50px;
     display: flex;
     flex-direction: row;
