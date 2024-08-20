@@ -1,43 +1,45 @@
 
-let datosUsuarios = `[
-    {"ID": "1", 
+let datos = `[
+    {"id": "1", 
     "Nombre":"Natalia", 
     "Departamento": "Luján", 
     "email":"natalia@gmail.com"
     },
-    {"ID": "2", 
+    {"id": "2", 
     "Nombre":"Facundo", 
     "Departamento":"Guaymallén", 
     "email":"facundo@gmail.com"
     },
-    {"ID": "3", 
+    {"id": "3", 
     "Nombre":"Carolina", 
     "Departamento":"Ciudad", 
     "email":"carolina@gmail.com"
     }
-]`;
+]`; 
 
-let datosJs = JSON.parse(datosUsuarios);
+let datosUsuarios = localStorage.setItem("usuarios", datos);
+let datosU = JSON.parse(localStorage.getItem("usuarios"));
 
 function ingresoDatos() {
-    let id = datosJs.length + 1;
+    let id = datosU.length + 1;
     let Nombre = prompt("Ingrese su nombre:");
     let Departamento = prompt("En qué departamento vive?");
     let email = prompt("Ingrese un email de contacto");
     
-    datosJs.push({ ID: id, Nombre: Nombre, Departamento: Departamento, email: email });
+    datosU.push({ id: id, Nombre: Nombre, Departamento: Departamento, email: email });
 
-    localStorage.setItem("usuarios", JSON.stringify(datosJs));
+    localStorage.setItem("usuarios", JSON.stringify(datosU));
     localStorage.getItem("usuarios");
 };
 
 function listaUsuarios() {
     console.log("Registro de Usuarios Mendocinos");
-    for (let i = 0; i < datosJs.length; i++) {
-    console.log("ID: " + datosJs[i].ID + ", Nombre: " + datosJs[i].Nombre + ", Departamento: " + datosJs[i].Departamento + ", email: " + datosJs[i].email);
+    for (let i = 0; i < datosU.length; i++) {
+    console.log("id: " + datosU[i].id + ", Nombre: " + datosU[i].Nombre + ", Departamento: " + datosU[i].Departamento + ", email: " + datosU[i].email);
     }
 };
 
 ingresoDatos();
 listaUsuarios();
+
 

@@ -1,0 +1,17 @@
+[
+    {"id": "1", 
+    "Nombre":"Natalia", 
+    "Departamento": "Luján", 
+    "email":"natalia@gmail.com"
+    },
+    {"id": "2", 
+    "Nombre":"Facundo", 
+    "Departamento":"Guaymallén", 
+    "email":"facundo@gmail.com"
+    },
+    {"id": "3", 
+    "Nombre":"Carolina", 
+    "Departamento":"Ciudad", 
+    "email":"carolina@gmail.com"
+    }
+]
