@@ -26,8 +26,7 @@ let datos = `[
     }
 ]`; 
 
-localStorage.setItem("usuarios", datos);
-let datosU = JSON.parse(localStorage.getItem("usuarios"));
+let datosU = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 let formulario = document.querySelector("form#formulario");
 
@@ -63,7 +62,7 @@ function ingresoDatos() {
     let id = datosU.length + 1;
     let nombre = document.querySelector("input#nombre").value;
     let departamento = document.querySelector("input#departamento").value;
-    let email = document.querySelector("input#email").value;
+    let email = document.querySelector("input#ingresoEmail").value;
     let contaminacion = document.querySelector("select#contaminacion").value;
     let tipo = document.querySelector("input[name=tipo]:checked").value; 
     let comentario = document.querySelector("textarea#comentarios").value;
@@ -76,6 +75,6 @@ function ingresoDatos() {
 function listaUsuarios() {
     console.log("Registro de Usuarios Mendocinos");
     for (let i = 0; i < datosU.length; i++){
-    console.log("id: " + datosU[i].id + ", Nombre: " + datosU[i].Nombre + ", Departamento: " + datosU[i].Departamento + ", email: " + datosU[i].email + ", Contaminación: " + datosU[i].Contaminacion + ", Tipo: " + datosU[i].Tipo + ", Comentario: " + datosU[i].Comentario);
+    console.log("id: " + datosU[i].id + ", Nombre: " + datosU[i].Nombre + ", Departamento: " + datosU[i].Departamento + ", email: " + datosU[i].Email + ", Contaminación: " + datosU[i].Contaminacion + ", Tipo: " + datosU[i].Tipo + ", Comentario: " + datosU[i].Comentario);
     }
 };
