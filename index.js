@@ -3,43 +3,79 @@ let datos = `[
     {"id": "1", 
     "Nombre":"Natalia", 
     "Departamento": "Luján", 
-    "email":"natalia@gmail.com"
+    "email":"natalia@gmail.com",
+    "Contaminacion": "si",
+    "Tipo": "microbiologica",
+    "Comentario": "Tengo contaminación y me gustaría contactarlos para consulta profesional"
     },
     {"id": "2", 
     "Nombre":"Facundo", 
     "Departamento":"Guaymallén", 
-    "email":"facundo@gmail.com"
+    "email":"facundo@gmail.com",
+    "Contaminacion": "si",
+    "Tipo": "quimica",
+    "Comentario": ""
     },
     {"id": "3", 
     "Nombre":"Carolina", 
     "Departamento":"Ciudad", 
-    "email":"carolina@gmail.com"
+    "email":"carolina@gmail.com",
+    "Contaminacion": "no",
+    "Tipo": "microbiologica",
+    "Comentario": "como puedo hacer para saber si tengo el agua contaminada?"
     }
 ]`; 
 
-let datosUsuarios = localStorage.setItem("usuarios", datos);
+localStorage.setItem("usuarios", datos);
 let datosU = JSON.parse(localStorage.getItem("usuarios"));
+
+let formulario = document.querySelector("form#formulario");
+
+formulario.addEventListener("submit", function(event){
+    let errores = [];
+    let inputNombre = document.querySelector("input#nombre");
+    if (inputNombre.value == ""){
+        errores.push("Debe completar con su nombre")
+    }else if(inputNombre.value.length < 5){
+        errores.push("El nombre debe tener al menos 5 caracteres")
+    }
+    let inputDepartamento = document.querySelector("input#departamento");
+    if (inputDepartamento.value.trim() == ""){
+        errores.push("Debe completar con el Departamento/Localidad de la propiedad")
+    }
+
+    let ulErrores = document.querySelector("div.errores ul");
+    ulErrores.innerHTML = "";
+    for(let i = 0; i < errores.length; i++){
+        ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
+    }
+
+    if (errores.length === 0){
+        event.preventDefault();
+        ingresoDatos();
+        listaUsuarios();
+    }else {
+        event.preventDefault();
+    }
+});
 
 function ingresoDatos() {
     let id = datosU.length + 1;
-    let Nombre = prompt("Ingrese su nombre:");
-    let Departamento = prompt("En qué departamento vive?");
-    let email = prompt("Ingrese un email de contacto");
-    
-    datosU.push({ id: id, Nombre: Nombre, Departamento: Departamento, email: email });
+    let nombre = document.querySelector("input#nombre").value;
+    let departamento = document.querySelector("input#departamento").value;
+    let email = document.querySelector("input#email").value;
+    let contaminacion = document.querySelector("select#contaminacion").value;
+    let tipo = document.querySelector("input[name=tipo]:checked").value; 
+    let comentario = document.querySelector("textarea#comentarios").value;
+
+    datosU.push({ id: id, Nombre: nombre, Departamento: departamento, Email: email, Contaminacion: contaminacion, Tipo: tipo, Comentario: comentario });
 
     localStorage.setItem("usuarios", JSON.stringify(datosU));
-    localStorage.getItem("usuarios");
 };
 
 function listaUsuarios() {
     console.log("Registro de Usuarios Mendocinos");
-    for (let i = 0; i < datosU.length; i++) {
-    console.log("id: " + datosU[i].id + ", Nombre: " + datosU[i].Nombre + ", Departamento: " + datosU[i].Departamento + ", email: " + datosU[i].email);
+    for (let i = 0; i < datosU.length; i++){
+    console.log("id: " + datosU[i].id + ", Nombre: " + datosU[i].Nombre + ", Departamento: " + datosU[i].Departamento + ", email: " + datosU[i].email + ", Contaminación: " + datosU[i].Contaminacion + ", Tipo: " + datosU[i].Tipo + ", Comentario: " + datosU[i].Comentario);
     }
 };
-
-ingresoDatos();
-listaUsuarios();
-
-

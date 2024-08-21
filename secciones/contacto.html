@@ -64,31 +64,34 @@
                 </li>
                 <li>
                     <label>Tenés agua contaminada en tu propiedad?
-                        <select id="dropdown">
-                            <option value="0" class="contam" placeholder="Presencia de contaminación?" >Si</option>
-                            <option value="1">No</option>
+                        <select id="contaminacion">
+                            <option value="Si"  placeholder="Presencia de contaminación?">Si</option>
+                            <option value="No">No</option>
                         </select>  
                     </label>
                 </li>
                 <li>
                     <legend>Qué tipo/s de contaminación tenés?</legend>
                         <label for="escorrentia">Por Escorrentía</label>
-                        <input type="radio" id="escorrentia" name="escorrentia" class="botones" checked />
+                        <input type="radio" id="escorrentia" name="tipo" value="escorrentia" class="botones" checked />
                         <label for="microbio">Microbiológica</label>
-                        <input type="radio" id="microbio" name="microbio" class="botones" />
+                        <input type="radio" id="microbio" name="tipo" value="microbiologica" class="botones" />
                         <label for="quimica">Química</label>
-                        <input type="radio" id="quimica" name="quimica" class="botones" />
+                        <input type="radio" id="quimica" name="tipo" value="quimica" class="botones" />
                         <label for="sedimentos">Por Sedimentación</label>
-                        <input type="radio" id="sedimentos" name="sedimentos" class="botones" />
+                        <input type="radio" id="sedimentos" name="tipo" value="sedimentos" class="botones" />
                 </li>
                 <li>
                     <label for="comentarios">Dejanos tu comentario o inquietud </label>
                     <textarea id="comentarios" rows="7" cols="40" placeholder="Ingresá tu comentario/inquietud..."></textarea>
                 </li>
                 <li>
-                    <input type="Submit" value="Enviar" id="submit"/>
+                    <input type="submit" value="Enviar" id="submit"/>
                 </li>
             </ul>
+            <div class="errores">
+                <ul></ul>
+            </div>
         </form>
     </div>
 
