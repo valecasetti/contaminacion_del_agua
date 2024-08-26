@@ -185,7 +185,9 @@ form{
 label, #contaminacion{
     display: block;
 }
-
+.fotoPerfil{
+    width: 15%;
+}
 
 @media (min-width: 768px){
     #grilla{
