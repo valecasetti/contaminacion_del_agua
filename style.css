@@ -167,6 +167,26 @@ footer{
     justify-content: center;
     align-items: center;
 }
+form{
+    background-color: #1A374E;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: left;
+    vertical-align: middle;
+    padding: 5%;
+    font-size: medium;
+    font-weight: 500;
+    border: 2px solid #77A3C7;
+    margin: 5% 15%;
+    justify-content: center;
+}
+label, #contaminacion{
+    display: block;
+}
+
+
 @media (min-width: 768px){
     #grilla{
         display: grid;
