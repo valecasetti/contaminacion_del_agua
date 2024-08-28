@@ -92,9 +92,9 @@ p{
     margin-top: 5%;
     width: 50%;
     }
-/* .figure-intro:hover{
-    width: 10%;
-} */
+.figure-intro:hover{
+    width: 51%;
+}
 .componentes{
     background-color: #1A374E;
     color: #ffffff;
@@ -213,15 +213,14 @@ footer{
     border-radius: 20px;
 }
 #formulario .form{
-    padding: 5%;
+    padding: 0 5% 5%;
 }
 #formulario .form li{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 6% 0 1% 0;
+    margin: 4% 0 1% 0;
 }
-
 .seleccion{
     display: grid;
 }
@@ -232,6 +231,18 @@ legend{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+input#submit{
+    background-color: #ffffff;
+    color: #1A374E;
+    font-weight: 700;
+    border: 2px solid #77A3C7;
+    border-radius: 8px;
+    margin-top: 2%;
+}
+input#submit:hover{
+    background-color: #77A3C7;
+    color: #ffffff;
 }
 .errores{
     color: #ffffff;
@@ -263,7 +274,7 @@ legend{
     border: 2px solid #77A3C7;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    width: 250px;
+    width: 220px;
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease;
@@ -384,6 +395,16 @@ legend{
     .tipos{
         width: 50%;
     }
+    #formulario{
+        font-size: large;
+        margin: 0 22% 5%;
+    }
+    legend{
+        font-size: large;
+    }
+    input#submit{
+        height: 38px;
+    }
 }
 
 @media (min-width: 1024px){
@@ -444,7 +465,21 @@ legend{
     .componentes{
         padding: 5%;
     }
+    #formulario .form li{
+        font-size: large;
+        margin: 3% 0 0;
+    }
+    #formulario{
+        padding: 2%;
+        margin: 3% 22% 7%;
+    }
+    legend{
+        font-size: large;
+    }
     .tipos{
         width: 35%;
+    }
+    input#submit{
+        height: 42px;
     }
 }
