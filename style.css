@@ -219,7 +219,9 @@ footer{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: 6% 0 1% 0;
 }
+
 .seleccion{
     display: grid;
 }
@@ -233,6 +235,7 @@ legend{
 }
 .errores{
     color: #ffffff;
+    font-size: small;
 }
 
 .hDos{
