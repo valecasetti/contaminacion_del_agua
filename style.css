@@ -30,6 +30,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    width: 100%;
 }
 .navbar-style .navbar-brand{ 
     color: #ffffff;
@@ -49,7 +50,7 @@ button.navbar-toggler{
 }
 .navbar-style .navbar-nav .nav-link:hover{
     font-size: 20px;
-    font-weight: 50%;
+    font-weight: 500;
 }
 .logo{
     width: 33px;
@@ -57,12 +58,19 @@ button.navbar-toggler{
 .portada{
     position: static;
     width: 100%;
-    margin-top: 128px;
+    margin-top: 104px;
 }
 h1{
     color: #77A3C7;
     font-weight: 700;
     text-align: center;
+    text-shadow: 
+                2px 2px 5px rgba(0, 0, 0, 0.1), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7), 
+                4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+p{
+    margin-bottom: 0;
 }
 .intro{
     background-color: #ffffff;
@@ -73,15 +81,17 @@ h1{
     border: 2px solid #77A3C7;
     font-size: small;
     font-weight: 500;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .figure-intro{
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     padding: 0px;
-    width: 75%;
-    border: 2px solid #77A3C7;
-}
+    margin-top: 5%;
+    width: 50%;
+    }
 /* .figure-intro:hover{
     width: 10%;
 } */
@@ -91,6 +101,8 @@ h1{
     padding: 5%;
     font-size: small;
     text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .componentes ul {
     padding: 0%;
@@ -123,10 +135,14 @@ h3{
     height: 30%;
     padding: 5%;
     font-size: small;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .uno{
     width: 100%;
     border: 2px solid #77A3C7;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .e-uno{
     display: flex;
@@ -143,10 +159,14 @@ h3{
     font-size: small;
     font-weight: 500;
     border: 2px solid #77A3C7;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .dos{
     width: 100%;
     border: 2px solid #77A3C7;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .e-dos{
     display: flex;
@@ -154,6 +174,11 @@ h3{
     align-items: center;
     margin: 5%;
 } 
+.tres{
+    border-radius: 20px;
+    border: 1px solid #77A3C7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
 footer img{
     height: 30px;
     padding: 15%;
@@ -167,28 +192,92 @@ footer{
     justify-content: center;
     align-items: center;
 }
-form{
+.footerTexto{
+    margin-right: 1rem;
+    margin-bottom: 0%;
+}
+#formulario{
     background-color: #1A374E;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     text-align: left;
-    vertical-align: middle;
     padding: 5%;
     font-size: medium;
     font-weight: 500;
     border: 2px solid #77A3C7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     margin: 5% 15%;
     justify-content: center;
+    border-radius: 20px;
 }
-label, #contaminacion{
-    display: block;
+.seleccion{
+    display: grid;
 }
+#formulario .form li{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+legend{
+    font-size: small;
+}
+.tipos{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* armar div para cada par de label con input */
+
+
 .fotoPerfil{
     width: 15%;
 }
+#perfiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+.perfilUsuario {
+    background-color: #ffffff;
+    border: 2px solid #77A3C7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.perfilUsuario:hover {
+    transform: translateY(-5px);
+}
+.perfilUsuario img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.perfilUsuario h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+.perfilUsuario p {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+    margin: 5px 3px;
+} 
 
+@media (min-width: 557px){
+    .portada{
+        margin-top: 88px;
+    }
+}
 @media (min-width: 768px){
     #grilla{
         display: grid;

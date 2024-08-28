@@ -92,7 +92,7 @@ fetch("https://randomuser.me/api/?results=5")
         let fechaRegistro = perfil.registered.date.split("T")[0];
 
         afectados.innerHTML += `
-        <div>
+        <div class="perfilUsuario">
             <img src="${perfil.picture.medium}" class="fotoPerfil"/>
             <h2>${perfil.name.first} ${perfil.name.last}</h2>
             <p>Localidad: ${perfil.location.city}</p>
