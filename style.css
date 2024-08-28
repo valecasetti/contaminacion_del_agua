@@ -212,24 +212,38 @@ footer{
     justify-content: center;
     border-radius: 20px;
 }
-.seleccion{
-    display: grid;
+#formulario .form{
+    padding: 5%;
 }
 #formulario .form li{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
+.seleccion{
+    display: grid;
+}
 legend{
-    font-size: small;
+    font-size: medium;
 }
 .tipos{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: space-between;
 }
-/* armar div para cada par de label con input */
+.errores{
+    color: #ffffff;
+}
 
-
+.hDos{
+    color: #77A3C7;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 
+                2px 2px 5px rgba(0, 0, 0, 0.1), 
+                -2px -2px 5px rgba(255, 255, 255, 0.7), 
+                4px 4px 10px rgba(0, 0, 0, 0.1);
+}
 .fotoPerfil{
     width: 15%;
 }
@@ -364,6 +378,9 @@ legend{
     .dos{
         width: auto;
     }
+    .tipos{
+        width: 50%;
+    }
 }
 
 @media (min-width: 1024px){
@@ -423,5 +440,8 @@ legend{
     }
     .componentes{
         padding: 5%;
+    }
+    .tipos{
+        width: 35%;
     }
 }
